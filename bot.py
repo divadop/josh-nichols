@@ -65,7 +65,7 @@ async def on_message(mes):
             if re.search(r"josh nichols", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "fucker don't use my name, copyRIgHt inFRinGEmEnt <@{0}>.".format(ID))
-            if re.search(r"/bi’m", mes.content.lower()):
+            if re.search(r"\bi’m", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "you think if you use that weird ass ’ symbol 'stead of ', you'll get away with starting the message with an 'I'm'? Lol think again *you walnut* <@{0}>.".format(ID))
             if re.search(r"porn", mes.content.lower()):
@@ -77,28 +77,28 @@ async def on_message(mes):
             if re.search(r"annoying", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "ur mahm is annoying <@{0}>.".format(ID))
-            if re.search(r"/bdie/b", mes.content.lower()):
+            if re.search(r"\bdie\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "no u <@{0}>.".format(ID))
-            if re.search(r"roleplay", mes.content.lower()) or re.search(r"/brp/b", mes.content.lower()):
+            if re.search(r"roleplay", mes.content.lower()) or re.search(r"\brp\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what's a roleplay lol <@{0}>.".format(ID))
-            if re.search(r"/boof", mes.content.lower()):
+            if re.search(r"\boof", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "***o o f*** indeed uwu <@{0}>.".format(ID))
-            if re.search(r"^no u$", mes.content.lower()):
+            if re.search(r"^no u\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "no u <@{0}>.".format(ID))
-            if re.search(r"/brape", mes.content.lower()):
+            if re.search(r"\brape", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "wtf rape is bad >:O <@{0}>.".format(ID))
-            if re.search(r"/bi ser/b", mes.content.lower()):
+            if re.search(r"\bi ser\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "that meme is so old :\<@{0}>.".format(ID))
-            if re.search(r"/bken/b", mes.content.lower()):
+            if re.search(r"\bken\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "lmao 10/10 roleplay <@{0}>.".format(ID))
-            if re.search(r"/blove/b", mes.content.lower()):
+            if re.search(r"\blove\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what is love? baby don't hurt me  owo<@{0}>.".format(ID))
             

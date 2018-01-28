@@ -6,7 +6,7 @@ import re
 import os
 
 Client = discord.Client()
-client = commands.Bot(command_prefix = "j.")
+bot = commands.Bot(command_prefix = "j.")
 
 
 
@@ -14,18 +14,63 @@ client = commands.Bot(command_prefix = "j.")
 async def on_ready():
     print("I'm ready, beatch!")
     client.trigger = True
+
+@bot.command(pass_context=True)
+async def commands():
+    await bot.say("""Wanna know the commands, {0}? Oh, OK
+```LMAO NO COMMANDS
+jk, there is one command uwu```
+`j.calc bal bet tries`
+```Bal is your current balance.
+bet is the minimal bet, the bet you're gonna start with, ya feel me?
+tries is the amount of coinflips ya gonna do with my killer tactic ok?```
+```wait lol there's another command, I almost forgot```
+`j.tactic`
+```describes my KILLER tactic lol.```
+""".format(ctx.message.author))
+                  
+@bot.command(pass_context=True)
+asyng def tactic(ctx):
+    await bot.say("""Here's my killer tactic {0}. So, don't question how it works, you can figure it out if you have brains lmao.
+    ```So, first, choose a minimal bet, that's the lowest you'll bet. It should be small enough, compared to the balance.
+    After that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and return to the minimal bet.
+    Doe you shouldn't double the bet if you win, ever. Use the j.calc command to calculate the chance of not fucking up. 
+    Ye I'll do the math for ya, walnut, ya better be thankful. Type j.commands to see how the command works lol.```""".format(ctx.message.author))
+    
+@bot.group(pass_context=True)
+asyng def hey(ctx):
+    if ctx.invoked_subcommand is None:
+        await bot.say("hWat owo")
+
+@role.command(act="stahp")
+async def hey_stahp(act):
+    await bot.say("No u")
+    if ctx.message.author == "383307469402931210":
+        bot.say("*jAYAYHFNSAOIhiaosfhoaissaoifhasoif*\nOK I stahp uwu")
+        client.trigger = False
+    else:
+        bot.say("don't tell me hwat to do uwu. Ur not my ass-daD uwu.")
+        
+@role.command(act="annoy")
+async def hey_stahp(act):
+    await bot.say("lol why")
+    if ctx.message.author == "383307469402931210":
+        bot.say("*jAYAYHFNSAOIhiaosfhoaissaoifhasoif*\nUnderstood lmao")
+        client.trigger = True
+    else:
+        bot.say("i'll annoy you in DMs, not here fq. Ur not my ass-daD uwu.")
+           
+
+    
+
 @client.event
 async def on_message(mes):
-    if mes.author.id == "383307469402931210":
-        if mes == "j.stahp":
-            client.trigger = False
-        if mes == "j.annoy":
-            client.trigger = True
     if mes.author.id == "406847337277947934":
         pass
     elif mes.author.id == "11037":
         pass
     else:
+        print(client.trigger)
         if client.trigger:
             if re.search(r"porps", mes.content.lower()):
                 ID = mes.author.id
@@ -102,6 +147,8 @@ async def on_message(mes):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what is love? baby don't hurt me  owo<@{0}>.".format(ID))
             
+            
+           
         if mes.content.lower().startswith("j.calc"):
             if re.match(r"^j.calc [0-9]+ [0-9]+ [0-9]+$", mes.content):
                 ID = mes.author.id
@@ -139,9 +186,4 @@ async def on_message(mes):
             else:
                 await client.send_message(mes.channel, "wtf that's not how the command works lol. r u blind <@{0}>?\n`j.calc bal bet tries`      this is the syntax. use ***fucking numbers***, jesus christ.".format(mes.author.id))
 
-        if mes.content == "j.commands":
-            await client.send_message(mes.channel, "Oh commands? OK\n```LMAO NO COMMANDS\njk, there is one command uwu\n```\n`j.calc bal bet tries`\n```Bal is your current balance.\nbet is the minimal bet, the bet you're gonna start with, ya feel me?\ntries is the amount of coinflips ya gonna do with my killer tactic ok?```\n```wait lol there's another command, I almost forgot```\n`j.tactic`\n```describes my KILLER tactic lol.```")
-        if mes.content == "j.tactic":
-            await client.send_message(mes.channel, "Here's my killer tactic dude. So, don't question how it works, you can figure it out if you have brains lmao.\n```So, first, choose a minimal bet, that's the lowest you'll bet. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and return to the minimal bet.\nDoe you shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of not fucking up. Ye I'll do the math for ya, walnut, ya better be thankful. Type j.commands to see how the command works lol.```")
-
-client.run(os.getenv('TOKEN'))
+bot.run(os.getenv('TOKEN'))

@@ -87,7 +87,7 @@ async def on_message(mes):
         if re.search(r"[^a-zA-Z]?i ser[^a-zA-Z]?", mes.content.lower()):
             ID = mes.author.id
             await client.send_message(mes.channel, "that meme is so old :\<@{0}>.".format(ID))
-        if re.search(r" ?ken ?", mes.content.lower()):
+        if re.search(r"[^a-zA-Z]+ken ?", mes.content.lower()):
             ID = mes.author.id
             await client.send_message(mes.channel, "lmao 10/10 roleplay <@{0}>.".format(ID))
         if re.search(r"[^a-zA-Z]?love[^a-zA-Z]?", mes.content.lower()):
@@ -136,4 +136,4 @@ async def on_message(mes):
         if mes.content == "j.tactic":
             await client.send_message(mes.channel, "Here's my killer tactic dude. So, don't question how it works, you can figure it out if you have brains lmao.\n```So, first, choose a minimal bet, that's the lowest you'll bet. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and return to the minimal bet.\nDoe you shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of not fucking up. Ye I'll do the math for ya, walnut, ya better be thankful. Type j.commands to see how the command works lol.```")
 
-client.run(os.getenv('TOKEN'))
+#client.run(os.getenv('TOKEN'))

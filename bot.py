@@ -87,7 +87,7 @@ async def on_message(mes):
         if re.search(r"[^a-zA-Z]?i ser[^a-zA-Z]?", mes.content.lower()):
             ID = mes.author.id
             await client.send_message(mes.channel, "that meme is so old :\<@{0}>.".format(ID))
-        if re.search(r"[^a-zA-Z]?ken[^a-zA-Z]?", mes.content.lower()):
+        if re.search(r" ?ken ?", mes.content.lower()):
             ID = mes.author.id
             await client.send_message(mes.channel, "lmao 10/10 roleplay <@{0}>.".format(ID))
         if re.search(r"[^a-zA-Z]?love[^a-zA-Z]?", mes.content.lower()):

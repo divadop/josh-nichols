@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
+import random
 import re
 import os
 
@@ -25,6 +26,9 @@ async def on_message(mes):
         elif mes.author.id == "288809701351751690":
             await client.send_message(mes.channel, "ayu y :sob:\bok uwu")
             client.trigger = False
+        elif mes.author.id == "260522328453021697":
+            await client.send_message(mes.channel, "If you say so :\\n~~doe I hope dave turns me back on when he comes back, aito >:O~~")
+            client.trigger = False
         else:
             await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
     if mes.content == "j.annoy":
@@ -35,16 +39,25 @@ async def on_message(mes):
         elif mes.author.id == "288809701351751690":
             await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
             client.trigger = True
+        await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
+            client.trigger = True
         else:
             await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
-    
+            
         
     if mes.author.id == "406847337277947934":
         pass
     elif mes.author.id == "11037":
         pass
     else:
+        if re.search(r"\bom\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "is this you <@{0}>".format(ID))
+                await client.send_message(mes.channel, random.choice["http://s2.quickmeme.com/img/8d/8da8c3d8e11da61d7886025a62be2d18f82e1c673007a357471c8a21ae70b8e0.jpg", "https://img.memecdn.com/om-nom-nom_o_2085747.jpg", "https://media.giphy.com/media/YmYemei6DDkrK/giphy.gif", "http://roflzoo.com/pics/052010/bird-om-nom-nom-big.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUJ14VGR5i5dWaiCLoH1YZx6kP4H7hfHWYgJzp1deYQj_BqGq"])
         if client.trigger:
+            '''if re.search(r" ", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
             if re.search(r"porps", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))
@@ -63,7 +76,7 @@ async def on_message(mes):
             if re.search(r"fuck", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "~~I'm not allowed to stop you from cursing anymore so go on uwu~~ <@{0}>.".format(ID))
-            if re.match(r"\bi'm", mes.content.lower()):
+            if re.search(r"\bi'm", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "lol, I miss DadBOT <@{0}>.".format(ID))
             if re.search(r"\blol\b", mes.content.lower()):
@@ -119,6 +132,49 @@ async def on_message(mes):
             if re.search(r"\blove\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what is love? baby don't hurt me  owo<@{0}>.".format(ID))
+            if re.search(r"undertale", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "Lol undertale is gay <@{0}>.".format(ID))
+            if re.search(r"^oh$", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "is 'oh' all you have to fucking say? ***pathetic***<@{0}>.".format(ID))
+            if re.search(r"fuck you", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "~~hey go jump off a cliff~~<@{0}>.".format(ID))
+            if re.search(r"\bdick\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "stop thinking about dicks omg<@{0}>.".format(ID))
+            if re.search(r"\bom\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "is this you <@{0}>".format(ID))
+                await client.send_message(mes.channel, random.choice["http://s2.quickmeme.com/img/8d/8da8c3d8e11da61d7886025a62be2d18f82e1c673007a357471c8a21ae70b8e0.jpg", "https://img.memecdn.com/om-nom-nom_o_2085747.jpg", "https://media.giphy.com/media/YmYemei6DDkrK/giphy.gif", "http://roflzoo.com/pics/052010/bird-om-nom-nom-big.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUJ14VGR5i5dWaiCLoH1YZx6kP4H7hfHWYgJzp1deYQj_BqGq"])
+            if re.search(r"\bah\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "what's that 'ah', *orGasM*?<@{0}>.".format(ID))
+            if re.search(r"\bsleep\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "sleep is gay lmao<@{0}>.".format(ID))
+            if re.search(r"\bstraight\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "straight as a curve lol <@{0}>.".format(ID))
+            if re.search(r"indeed", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, ":perhaps:<@{0}>.".format(ID))
+            if re.search(r"our love is god", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "our love is gandon\n(~~gandon means fag in Russian ololo~~)<@{0}>.".format(ID))
+            if re.search(r"i was meant to be yours", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "no u weren't lmao you're gay I love my dead gay son<@{0}>.".format(ID))
+            if re.search(r"\baction spamming\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "FUCK OFF >:O\n***~~cuz that's action spamming lmaO~~***<@{0}>.".format(ID))
+            if re.search(r"\bded\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "dead*\nha gotteeeem<@{0}>.".format(ID))
+            if re.search(r"\bkms\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "here's a noose lmao<@{0}>.".format(ID))
             
         if mes.content.lower().startswith("j.calc"):
             if re.match(r"^j.calc [0-9]+ [0-9]+ [0-9]+$", mes.content):

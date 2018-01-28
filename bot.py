@@ -10,10 +10,10 @@ bot = commands.Bot(command_prefix = "j.")
 
 
 
-@client.event
+@bot.event
 async def on_ready():
     print("I'm ready, beatch!")
-    client.trigger = True
+    bot.trigger = True
 
 @bot.command(pass_context=True)
 async def commands():
@@ -47,7 +47,7 @@ async def hey_stahp(act):
     await bot.say("No u")
     if ctx.message.author == "383307469402931210":
         bot.say("*jAYAYHFNSAOIhiaosfhoaissaoifhasoif*\nOK I stahp uwu")
-        client.trigger = False
+        bot.trigger = False
     else:
         bot.say("don't tell me hwat to do uwu. Ur not my ass-daD uwu.")
         
@@ -56,96 +56,96 @@ async def hey_stahp(act):
     await bot.say("lol why")
     if ctx.message.author == "383307469402931210":
         bot.say("*jAYAYHFNSAOIhiaosfhoaissaoifhasoif*\nUnderstood lmao")
-        client.trigger = True
+        bot.trigger = True
     else:
         bot.say("i'll annoy you in DMs, not here fq. Ur not my ass-daD uwu.")
            
 
     
 
-@client.event
+@bot.event
 async def on_message(mes):
     if mes.author.id == "406847337277947934":
         pass
     elif mes.author.id == "11037":
         pass
     else:
-        print(client.trigger)
-        if client.trigger:
+        print(bot.trigger)
+        if bot.trigger:
             if re.search(r"porps", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))
+                await bot.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))
             if re.search(r"david", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "who said dat name? was it you? what do you want? ask me, I'll tell him in DMs <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "who said dat name? was it you? what do you want? ask me, I'll tell him in DMs <@{0}>.".format(ID))
             if re.search(r"wood", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "lol wood makes me go :eggplant::sweat_drops: <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "lol wood makes me go :eggplant::sweat_drops: <@{0}>.".format(ID))
             if re.search(r"\bgay", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "random fan fact: people who use the word 'gay' too often are more likely to be gay lmao <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "random fan fact: people who use the word 'gay' too often are more likely to be gay lmao <@{0}>.".format(ID))
             if re.search(r"brb pee", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "HAHA YES VERY FUNNY MEME (sarcasm) <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "HAHA YES VERY FUNNY MEME (sarcasm) <@{0}>.".format(ID))
             if re.search(r"fuck", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "~~I'm not allowed to stop you from cursing anymore so go on uwu~~ <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "~~I'm not allowed to stop you from cursing anymore so go on uwu~~ <@{0}>.".format(ID))
             if re.match(r"\bi'm", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "lol, I miss DadBOT <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "lol, I miss DadBOT <@{0}>.".format(ID))
             if re.search(r"\blol\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "lmao <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "lmao <@{0}>.".format(ID))
             if mes.content.lower().startswith("hi"):
                 ID = mes.author.id
                 res = mes.content.split(" ")
-                await client.send_message(mes.channel, "I ain't no \"{0}\" lmao. <@{1}> u gay as fuck lol.".format(" ".join(res[1:]), ID))
+                await bot.send_message(mes.channel, "I ain't no \"{0}\" lmao. <@{1}> u gay as fuck lol.".format(" ".join(res[1:]), ID))
             if mes.content.lower().startswith("what"):
                 ID = mes.author.id
                 res = mes.content.split(" ")
-                await client.send_message(mes.channel, "whatwhatwhatwhat. what is it? stop with the fucking what questions ffs <@{0}> u bad".format(ID))
+                await bot.send_message(mes.channel, "whatwhatwhatwhat. what is it? stop with the fucking what questions ffs <@{0}> u bad".format(ID))
             if re.search(r"lmao", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "ye laughing my ass off too lol <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "ye laughing my ass off too lol <@{0}>.".format(ID))
             if re.search(r"josh nichols", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "fucker don't use my name, copyRIgHt inFRinGEmEnt <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "fucker don't use my name, copyRIgHt inFRinGEmEnt <@{0}>.".format(ID))
             if re.search(r"\bi’m", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "you think if you use that weird ass ’ symbol 'stead of ', you'll get away with starting the message with an 'I'm'? Lol think again *you walnut* <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "you think if you use that weird ass ’ symbol 'stead of ', you'll get away with starting the message with an 'I'm'? Lol think again *you walnut* <@{0}>.".format(ID))
             if re.search(r"porn", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "porn? lol y u so horny <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "porn? lol y u so horny <@{0}>.".format(ID))
             if re.search(r":thonking:", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "so ya like thonking huh <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "so ya like thonking huh <@{0}>.".format(ID))
             if re.search(r"annoying", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "ur mahm is annoying <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "ur mahm is annoying <@{0}>.".format(ID))
             if re.search(r"\bdie\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "no u <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "no u <@{0}>.".format(ID))
             if re.search(r"roleplay", mes.content.lower()) or re.search(r"\brp\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "what's a roleplay lol <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "what's a roleplay lol <@{0}>.".format(ID))
             if re.search(r"\boof", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "***o o f*** indeed uwu <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "***o o f*** indeed uwu <@{0}>.".format(ID))
             if re.search(r"^no u\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "no u <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "no u <@{0}>.".format(ID))
             if re.search(r"\brape", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "wtf rape is bad >:O <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "wtf rape is bad >:O <@{0}>.".format(ID))
             if re.search(r"\bi ser\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "that meme is so old :\<@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "that meme is so old :\<@{0}>.".format(ID))
             if re.search(r"\bken\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "lmao 10/10 roleplay <@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "lmao 10/10 roleplay <@{0}>.".format(ID))
             if re.search(r"\blove\b", mes.content.lower()):
                 ID = mes.author.id
-                await client.send_message(mes.channel, "what is love? baby don't hurt me  owo<@{0}>.".format(ID))
+                await bot.send_message(mes.channel, "what is love? baby don't hurt me  owo<@{0}>.".format(ID))
             
             
            
@@ -163,27 +163,27 @@ async def on_message(mes):
                     temp *= 2
 
                 if total_tries<=tries and bal-tries*bet > 0:
-                    await client.send_message(mes.channel, "You ***can't even fucking lose all your money with {0} tries, you'll have {1} dollars even if you lose every single time wtf <@{2}> you ok?".format(str(total_tries), str(bal-tries*bet), ID))
+                    await bot.send_message(mes.channel, "You ***can't even fucking lose all your money with {0} tries, you'll have {1} dollars even if you lose every single time wtf <@{2}> you ok?".format(str(total_tries), str(bal-tries*bet), ID))
                 elif total_tries <= 0 or bal <=0 or bet <=0:
-                    await client.send_message(mes.channel, "What the fuck, you can't even start the game like that smh. <@{0}>.".format(ID))
+                    await bot.send_message(mes.channel, "What the fuck, you can't even start the game like that smh. <@{0}>.".format(ID))
                 elif bet > bal:
-                    await client.send_message(mes.channel, "lmao the bet is bigger than the balance, ye sure good luck with that lol. <@{0}>.".format(ID))
+                    await bot.send_message(mes.channel, "lmao the bet is bigger than the balance, ye sure good luck with that lol. <@{0}>.".format(ID))
                 else:
                     chance = 100-((1-((1-(0.5**tries))**(total_tries/tries)))*100)
-                    await client.send_message(mes.channel, "The chance that you won't lose all your money in the end is {0}%, <@{1}>.".format(chance, ID))
+                    await bot.send_message(mes.channel, "The chance that you won't lose all your money in the end is {0}%, <@{1}>.".format(chance, ID))
                     if chance >= 99:
-                        await client.send_message(mes.channel, "Oof, that's a pretty high chance. I wish you lose lmao, that'd be funny af. jk I don't care uwu")
+                        await bot.send_message(mes.channel, "Oof, that's a pretty high chance. I wish you lose lmao, that'd be funny af. jk I don't care uwu")
                     elif chance >= 75:
-                        await client.send_message(mes.channel, "Hmmm, at least it's more than 75%. I'd risk it but lmao I'm not you and I'm JOSH NICHOLS!")
+                        await bot.send_message(mes.channel, "Hmmm, at least it's more than 75%. I'd risk it but lmao I'm not you and I'm JOSH NICHOLS!")
                     elif chance >= 50:
-                        await client.send_message(mes.channel, "Do you rly wanna risk it? Although, the probability is not smaller than 50%, which is good enough. You could just go all in, the probability would be close. Still, whatevs, good luck I guess? :thinking:")
+                        await bot.send_message(mes.channel, "Do you rly wanna risk it? Although, the probability is not smaller than 50%, which is good enough. You could just go all in, the probability would be close. Still, whatevs, good luck I guess? :thinking:")
                     elif chance >= 25:
-                        await client.send_message(mes.channel, "Nah man not worth it, unless you totes desperate lmao. I'd still advise tryin' to tweak the numbers ya see?")
+                        await bot.send_message(mes.channel, "Nah man not worth it, unless you totes desperate lmao. I'd still advise tryin' to tweak the numbers ya see?")
                     elif chance >= 10:
-                        await client.send_message(mes.channel, "Lmao don't even try")
+                        await bot.send_message(mes.channel, "Lmao don't even try")
                     else:
-                        await client.send_message(mes.channel, "wtf, you can't be considering that, that'd be the stupidest thing ever rly")
+                        await bot.send_message(mes.channel, "wtf, you can't be considering that, that'd be the stupidest thing ever rly")
             else:
-                await client.send_message(mes.channel, "wtf that's not how the command works lol. r u blind <@{0}>?\n`j.calc bal bet tries`      this is the syntax. use ***fucking numbers***, jesus christ.".format(mes.author.id))
+                await bot.send_message(mes.channel, "wtf that's not how the command works lol. r u blind <@{0}>?\n`j.calc bal bet tries`      this is the syntax. use ***fucking numbers***, jesus christ.".format(mes.author.id))
 
 bot.run(os.getenv('TOKEN'))

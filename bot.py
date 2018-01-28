@@ -14,15 +14,15 @@ async def on_ready():
     trigger = True
 @client.event
 async def on_message(mes):
-    if mes.author.id == "406847337277947934":
-        pass
-    elif mes.author.id == "11037":
-        pass
-    elif mes.author.id == "383307469402931210":
+    if mes.author.id == "383307469402931210":
         if mes == "j.stahp":
             trigger = False
         if mes == "j.annoy":
             trigger = True
+    if mes.author.id == "406847337277947934":
+        pass
+    elif mes.author.id == "11037":
+        pass
     else:
         if trigger:
             if re.search(r"porps", mes.content.lower()):

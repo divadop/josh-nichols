@@ -18,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":
-        client.send_message(mes.channel, "no u")
+        await client.send_message(mes.channel, "no u")
         if mes.author.id == "383307469402931210":
             await client.send_message(mes.channel, "...ngh ok whatever uwu")
             client.trigger = False
@@ -28,7 +28,7 @@ async def on_message(mes):
         else:
             await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
     if mes.content == "j.annoy":
-        client.send_message(mes.channel, "no lmao")
+        await client.send_message(mes.channel, "no lmao")
         if mes.author.id == "383307469402931210":
             await client.send_message(mes.channel, "haha jk ofc owo")
             client.trigger = True

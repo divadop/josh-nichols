@@ -8,24 +8,25 @@ import os
 Client = discord.Client()
 client = commands.Bot(command_prefix = "j.")
 
-trigger = True
+
 
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
+    client.trigger = True
 @client.event
 async def on_message(mes):
     if mes.author.id == "383307469402931210":
         if mes == "j.stahp":
-            trigger = False
+            client.trigger = False
         if mes == "j.annoy":
-            trigger = True
+            client.trigger = True
     if mes.author.id == "406847337277947934":
         pass
     elif mes.author.id == "11037":
         pass
     else:
-        if trigger:
+        if client.trigger:
             if re.search(r"porps", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))

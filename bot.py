@@ -8,10 +8,11 @@ import os
 Client = discord.Client()
 client = commands.Bot(command_prefix = "j.")
 
+trigger = True
+
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
-    trigger = True
 @client.event
 async def on_message(mes):
     if mes.author.id == "383307469402931210":

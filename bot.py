@@ -7,7 +7,7 @@ import os
 Client = discord.Client()
 client = commands.Bot(command_prefix = "j.")
 
-@bot.command()
+@client.command()
 async def ping():
     await bot.say("Pong!")
 

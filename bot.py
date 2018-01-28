@@ -30,7 +30,7 @@ tries is the amount of coinflips ya gonna do with my killer tactic ok?```
 """.format(ctx.message.author))
                   
 @bot.command(pass_context=True)
-asyng def tactic(ctx):
+async def tactic(ctx):
     await bot.say("""Here's my killer tactic {0}. So, don't question how it works, you can figure it out if you have brains lmao.
     ```So, first, choose a minimal bet, that's the lowest you'll bet. It should be small enough, compared to the balance.
     After that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and return to the minimal bet.
@@ -38,7 +38,7 @@ asyng def tactic(ctx):
     Ye I'll do the math for ya, walnut, ya better be thankful. Type j.commands to see how the command works lol.```""".format(ctx.message.author))
     
 @bot.group(pass_context=True)
-asyng def hey(ctx):
+async def hey(ctx):
     if ctx.invoked_subcommand is None:
         await bot.say("hWat owo")
 

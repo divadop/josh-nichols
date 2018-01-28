@@ -42,7 +42,7 @@ async def hey(ctx):
     if ctx.invoked_subcommand is None:
         await bot.say("hWat owo")
 
-@act.command(act="stahp")
+@hey.command(act="stahp")
 async def hey_stahp(act):
     await bot.say("No u")
     if ctx.message.author == "383307469402931210":
@@ -51,7 +51,7 @@ async def hey_stahp(act):
     else:
         bot.say("don't tell me hwat to do uwu. Ur not my ass-daD uwu.")
         
-@act.command(act="annoy")
+@hey.command(act="annoy")
 async def hey_stahp(act):
     await bot.say("lol why")
     if ctx.message.author == "383307469402931210":

@@ -28,7 +28,7 @@ async def on_message(mes):
         else:
             client.send_message("lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
     if mes.content == "j.annoy":
-            client.send_message("no lmao")
+        client.send_message("no lmao")
         if mes.author.id == "383307469402931210":
             client.send_message("haha jk ofc owo")
             client.trigger = True

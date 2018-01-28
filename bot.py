@@ -34,7 +34,7 @@ async def on_message(mes):
             client.trigger = True
         elif mes.author.id == "288809701351751690":
             await client.send_message("*ayu wh-*\n***LOL OKAY :joy:***")
-            client.trigger = False
+            client.trigger = True
         else:
             await client.send_message("lmao no fuck off u horny beatch :joy::joy:")
     

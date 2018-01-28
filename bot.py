@@ -18,25 +18,25 @@ async def on_ready():
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":
-        client.send_message("no u")
+        client.send_message(mes.channel, "no u")
         if mes.author.id == "383307469402931210":
-            await client.send_message("...ngh ok whatever uwu")
+            await client.send_message(mes.channel, "...ngh ok whatever uwu")
             client.trigger = False
         elif mes.author.id == "288809701351751690":
-            await client.send_message("ayu y :sob:\bok uwu")
+            await client.send_message(mes.channel, "ayu y :sob:\bok uwu")
             client.trigger = False
         else:
-            await client.send_message("lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
+            await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
     if mes.content == "j.annoy":
-        client.send_message("no lmao")
+        client.send_message(mes.channel, "no lmao")
         if mes.author.id == "383307469402931210":
-            await client.send_message("haha jk ofc owo")
+            await client.send_message(mes.channel, "haha jk ofc owo")
             client.trigger = True
         elif mes.author.id == "288809701351751690":
-            await client.send_message("*ayu wh-*\n***LOL OKAY :joy:***")
+            await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
             client.trigger = True
         else:
-            await client.send_message("lmao no fuck off u horny beatch :joy::joy:")
+            await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
     
         
     if mes.author.id == "406847337277947934":

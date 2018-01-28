@@ -52,7 +52,7 @@ async def hey_stahp(act):
         bot.say("don't tell me hwat to do uwu. Ur not my ass-daD uwu.")
         
 @hey.command(act="annoy")
-async def hey_stahp(act):
+async def hey_annoy(act):
     await bot.say("lol why")
     if ctx.message.author == "383307469402931210":
         bot.say("*jAYAYHFNSAOIhiaosfhoaissaoifhasoif*\nUnderstood lmao")

@@ -39,7 +39,8 @@ async def on_message(mes):
         elif mes.author.id == "288809701351751690":
             await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
             client.trigger = True
-        await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
+        elif mes.author.id == "260522328453021697"
+            await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
             client.trigger = True
         else:
             await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")

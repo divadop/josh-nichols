@@ -15,33 +15,33 @@ async def ping():
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
-    client.trigger = True
+    client.trigger = {}
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":
         await client.send_message(mes.channel, "no u")
         if mes.author.id == "383307469402931210":
             await client.send_message(mes.channel, "...ngh ok whatever uwu")
-            client.trigger = False
+            client.trigger[mes.server.id] = False
         elif mes.author.id == "288809701351751690":
             await client.send_message(mes.channel, "ayu y :sob:\bok uwu")
-            client.trigger = False
+            client.trigger[mes.server.id] = False
         elif mes.author.id == "260522328453021697":
             await client.send_message(mes.channel, "If you say so :\\n~~doe I hope dave turns me back on when he comes back, aito >:O~~")
-            client.trigger = False
+            client.trigger[mes.server.id] = False
         else:
             await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
     if mes.content == "j.annoy":
         await client.send_message(mes.channel, "no lmao")
         if mes.author.id == "383307469402931210":
             await client.send_message(mes.channel, "haha jk ofc owo")
-            client.trigger = True
+            client.trigger[mes.server.id] = True
         elif mes.author.id == "288809701351751690":
             await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
-            client.trigger = True
+            client.trigger[mes.server.id] = True
         elif mes.author.id == "260522328453021697":
             await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
-            client.trigger = True
+            client.trigger[mes.server.id] = True
         else:
             await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
             
@@ -56,7 +56,7 @@ async def on_message(mes):
                 await client.send_message(mes.channel, "is this you <@{0}>".format(ID))
                 pic = random.choice(["http://s2.quickmeme.com/img/8d/8da8c3d8e11da61d7886025a62be2d18f82e1c673007a357471c8a21ae70b8e0.jpg", "https://img.memecdn.com/om-nom-nom_o_2085747.jpg", "https://media.giphy.com/media/YmYemei6DDkrK/giphy.gif", "http://roflzoo.com/pics/052010/bird-om-nom-nom-big.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUJ14VGR5i5dWaiCLoH1YZx6kP4H7hfHWYgJzp1deYQj_BqGq"])
                 await client.send_message(mes.channel, pic)
-        if client.trigger:
+        if client.trigger.get(mes.server.id, True):
             '''if re.search(r" ", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, " <@{0}>.".format(ID))'''

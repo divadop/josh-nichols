@@ -204,7 +204,7 @@ async def on_message(mes):
             if re.search(r"\btriggers?\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "lol triggered <@{0}>.".format(ID))
-            if re.search(r"\bhomework\b", mes.content.lower()) or re.search(r"\bhw\"b, mes.content.lower ()):
+            if re.search(r"\bhomework\b", mes.content.lower()) or re.search(r"\bhw\b", mes.content.lower ()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "homework is fucking gay amirite :joy: <@{0}>.".format(ID))
             if re.search(r"\bgames?\b", mes.content.lower()):

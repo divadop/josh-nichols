@@ -16,6 +16,7 @@ async def ping():
 async def on_ready():
     print("I'm ready, beatch!")
     client.trigger = {}
+    client.persona = {}
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":
@@ -45,7 +46,11 @@ async def on_message(mes):
         else:
             await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
             
-        
+    if mes.content == "jd.persona":
+        await client.send_message(mes.channel, "...change... Persona...?")
+        if client.persona.get(mes.server.id, True):
+            await client.send_message(mes.channel, "You want me to reurn to... *that* persona...?")
+            
     if mes.author.id == "406847337277947934":
         pass
     elif mes.author.id == "11037":

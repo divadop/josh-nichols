@@ -171,7 +171,7 @@ async def on_message(mes):
                 if mes.content.lower().startswith("what"):
                     ID = mes.author.id
                     res = mes.content.split(" ")
-                    await client.send_message(mes.channel, "That's a good question... I think. <@{0}> u bad".format(ID))
+                    await client.send_message(mes.channel, "That's a good question... I think. <@{0}>".format(ID))
                 if re.search(r"lmao", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Yeah, L.M.A.O ^^' <@{0}>.".format(ID))
@@ -214,7 +214,7 @@ async def on_message(mes):
                 if re.search(r"fuck you", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Oof, let's just chill- <@{0}>.".format(ID))
-                if re.search(r"\bGood ?night\b", mes.content.lower()):
+                if re.search(r"\bgood ?night\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Goodnight!".format(ID))
                 if re.search(r"indeed", mes.content.lower()):
@@ -255,7 +255,7 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "Harakiri is not da wae.<@{0}>.".format(ID))
                 if re.search(r"\bsmh\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "smh <@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Yeah, smh uwu<@{0}>.".format(ID))
                 if re.search(r"\bsex\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "~~Hot~~ <@{0}>.".format(ID))
@@ -271,7 +271,7 @@ async def on_message(mes):
                 if re.search(r"\bgames?\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "No games no life ^^'<@{0}>.".format(ID))
-                if re.search(r"\bi'm back\b", mes.content.lower()):
+                if re.search(r"\bi'm bac(k|c)\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Welcome back!<@{0}>.".format(ID))
 

@@ -129,7 +129,7 @@ async def on_message(mes):
                     await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
                 if re.search(r"<@214809167368683521>", mes.content.lower()):
                     ID = mes.author.id
-                    if get_member("214809167368683521").status != "online" and get_member("214809167368683521").status != "idle":
+                    if discord.Server.get_member(mes.server, user_id = "214809167368683521").status != "online" and discord.Server.get_member(mes.server, user_id = "214809167368683521").status != "idle":
                         await client.send_message(mes.channel, "Hm, PurpleHaze doesn't seem to be free right now. <@{0}>, I'll DM him your message, if you want. Say yes if you do.".format(ID))
                         def check(msg):
                             if re.match(r"^'?\"?yes\"?'?\b", msg.content.lower()):
@@ -138,12 +138,12 @@ async def on_message(mes):
                                 return False
                         msg2 = wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
                         if msg2:
-                            send_message(get_member("214809167368683521"), msg2)
+                            send_message(discord.Server.get_member(mes.server, user_id = "214809167368683521"), msg2)
                             msg2 = None
                 if re.search(r"david", mes.content.lower()):
                     ID = mes.author.id
                     print(discord.Server.get_member(mes.server, user_id = "383307469402931210").status)
-                    if get_member("383307469402931210").status != "online" and get_member("383307469402931210").status != "idle":
+                    if discord.Server.get_member(mes.server, user_id = "383307469402931210").status != "online" and discord.Server.get_member(mes.server, user_id = "383307469402931210").status != "idle":
                         await client.send_message(mes.channel, "Hm, Father doesn't seem to be free right now. <@{0}>, I'll DM him your message, if you want. Say yes if you do.".format(ID))
                         def check(msg):
                             if re.match(r"^'?\"?yes\"?'?\b", msg.content.lower()):
@@ -152,7 +152,7 @@ async def on_message(mes):
                                 return False
                         msg2 = wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
                         if msg2:
-                            send_message(get_member("383307469402931210"), msg2)
+                            send_message(discord.Server.get_member(mes.server, user_id = "383307469402931210"), msg2)
                             msg2 = None
                 if re.search(r"w ?o ?o ?d", mes.content.lower()):
                     ID = mes.author.id

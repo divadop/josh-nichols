@@ -174,6 +174,25 @@ async def on_message(mes):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "here's a noose lmao<@{0}>.".format(ID))
             
+            if re.search(r"\bpp\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "lol 'pp' what are you 57 <@{0}>.".format(ID))
+            if re.search(r"\bwtf\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "no rly watzefuk <@{0}>.".format(ID))
+            if re.search(r"\bowo\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "***notices bulge*** owo what's this <@{0}>.".format(ID))
+            if re.search(r"\bbot\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "***bots are human too*** \nlmaojk<@{0}>.".format(ID))
+            if re.search(r"\bwafful\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "it's falafel for u >:o <@{0}>.".format(ID))
+            if re.search(r"\bharakiri\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "don't do a harakiri :weary: <@{0}>.".format(ID))
+                
         if mes.content.lower().startswith("j.calc"):
             if re.match(r"^j.calc [0-9]+ [0-9]+ [0-9]+$", mes.content):
                 ID = mes.author.id

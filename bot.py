@@ -316,11 +316,11 @@ async def on_message(mes):
             emb.add_field(name="```j.calc <balance> <minimal_bet> <tries>```", value="**<balance>** - your starting balance, the amount of money you have available.\n**<minimal_bet>** - the lowest bet you'll be placing during the game. Play around with it to pick the best value.\n**<tries>** - the amount of times you're gonna play.\n\nThe result will be the probability of you not losing all of your money if you play that many times.")
             emb.add_field(name="```j.doit```", value="Gives me permission to speak. Not everyone can use this command.")
             emb.add_field(name="```j.stahp```", value="Takes away my permission to speak. Not everyone can use this command.")
-            emb.add_field(name="```j.persona```", value="........reverts me back to the 'Josh' personality. Please don't use this, I'm begging you.")
-
+            emb.add_field(name="```j.tactic```", value="Describes the tactic that I recommend playing with to win in the coinflip game.")
+            emb.add_field(name="```jd.persona```", value="........reverts me back to the 'Josh' personality. Please don't use this, I'm begging you.")
+            
             if mes.content == "j.commands":
                 await client.send_message(mes.channel, "Here.", embed = emb)
-                )
             if mes.content == "j.tactic":
                 await client.send_message(mes.channel, "```First, choose a minimal bet, that's the lowest bet you'll be placing during the whole game. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and start betting again from the minimal bet.\nYou shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of succeeding.\nType j.commands to see how the command works, please.```")
 
@@ -525,7 +525,7 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "wtf that's not how the command works lol. r u blind <@{0}>?\n`j.calc bal bet tries`      this is the syntax. use ***fucking numbers***, jesus christ.".format(mes.author.id))
 
             if mes.content == "j.commands":
-                await client.send_message(mes.channel, "Oh commands? OK\n```LMAO NO COMMANDS\njk, there is one command uwu\n```\n`j.calc bal bet tries`\n```Bal is your current balance.\nbet is the minimal bet, the bet you're gonna start with, ya feel me?\ntries is the amount of coinflips ya gonna do with my killer tactic ok?```\n```wait lol there's another command, I almost forgot```\n`j.tactic`\n```describes my KILLER tactic lol.\nAlso, j.doit and j.stop control me lol```")
+                await client.send_message(mes.channel, "Oh commands? OK\n```LMAO NO COMMANDS\njk, there is one command uwu\n```\n`j.calc bal bet tries`\n```Bal is your current balance.\nbet is the minimal bet, the bet you're gonna start with, ya feel me?\ntries is the amount of coinflips ya gonna do with my killer tactic ok?```\n```wait lol there's another command, I almost forgot```\n`j.tactic`\n```describes my KILLER tactic lol.\nAlso, j.doit and j.stop control me lol. Never fucking use the jd.persona command, it's gay.```")
             if mes.content == "j.tactic":
                 await client.send_message(mes.channel, "Here's my killer tactic dude. So, don't question how it works, you can figure it out if you have brains lmao.\n```So, first, choose a minimal bet, that's the lowest you'll bet. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and return to the minimal bet.\nDoe you shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of not fucking up. Ye I'll do the math for ya, walnut, ya better be thankful. Type j.commands to see how the command works lol.```")
 

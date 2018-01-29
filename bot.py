@@ -183,7 +183,7 @@ async def on_message(mes):
             if re.search(r"\bowo\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "***notices bulge*** owo what's this <@{0}>.".format(ID))
-            if re.search(r"\bbot\b", mes.content.lower()):
+            if re.search(r"\bbots?\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "***bots are human too*** \nlmaojk<@{0}>.".format(ID))
             if re.search(r"\bwafful\b", mes.content.lower()):
@@ -192,7 +192,25 @@ async def on_message(mes):
             if re.search(r"\bharakiri\b", mes.content.lower()):
                 ID = mes.author.id
                 await client.send_message(mes.channel, "don't do a harakiri :weary: <@{0}>.".format(ID))
-                
+            if re.search(r"\bsmh\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "lol which head? ***o w o***<@{0}>.".format(ID))
+            if re.search(r"\bsex\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "hot <@{0}>.".format(ID))
+            if re.search(r"\bvore\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "**hot** <@{0}>.".format(ID))
+            if re.search(r"\btriggers?\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "lol triggered <@{0}>.".format(ID))
+            if re.search(r"\bhomework\b", mes.content.lower()) or re.search(r"\bhw\"b, mes.content.lower ()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "homework is fucking gay amirite :joy: <@{0}>.".format(ID))
+            if re.search(r"\bgames?\b", mes.content.lower()):
+                ID = mes.author.id
+                await client.send_message(mes.channel, "games are gay uwu<@{0}>.".format(ID))
+            
         if mes.content.lower().startswith("j.calc"):
             if re.match(r"^j.calc [0-9]+ [0-9]+ [0-9]+$", mes.content):
                 ID = mes.author.id

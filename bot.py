@@ -142,7 +142,7 @@ async def on_message(mes):
                             msg2 = None
                 if re.search(r"david", mes.content.lower()):
                     ID = mes.author.id
-                    print(discord.Server.get_member("383307469402931210").status)
+                    print(discord.Server.get_member(server, user_id = "383307469402931210").status)
                     if get_member("383307469402931210").status != "online" and get_member("383307469402931210").status != "idle":
                         await client.send_message(mes.channel, "Hm, Father doesn't seem to be free right now. <@{0}>, I'll DM him your message, if you want. Say yes if you do.".format(ID))
                         def check(msg):

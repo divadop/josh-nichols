@@ -158,10 +158,10 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "Yes, all hail Wood!<@{0}>.".format(ID))
                 if re.search(r"\bgay", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "At least you're not using the word ~~faggot~~, hehe. ~~Don't say it because I won't react to that since I don't want to promote the word~~.<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "At least you're not using the word ~~faggot~~, hehe. ~~Don't say it because I won't react to that since I don't want to promote the word~~. <@{0}>.".format(ID))
                 if re.search(r"brb pee", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "*And I'll go take a Nidai as well* :grin:<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "*And I'll go take a Nidai as well* :grin: <@{0}>.".format(ID))
                 if re.search(r"fuck", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Oof <@{0}>.".format(ID))
@@ -183,13 +183,13 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "***A r o u s i n g***   ~~sorry for the old meme~~. <@{0}>.".format(ID))
                 if re.search(r":thonking:", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, ":thonking:<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, ":thonking: <@{0}>.".format(ID))
                 if re.search(r"annoying", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "I mean, it's still bearable- <@{0}>.".format(ID))
                 if re.search(r"\bdie\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Nnngh, nobody has to die uwu.<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Nnngh, nobody has to die uwu. <@{0}>.".format(ID))
                 if re.search(r"\boof", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "***O o f*** <@{0}>.".format(ID))
@@ -201,7 +201,7 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "I-interesting conversation you're having there- <@{0}>.".format(ID))
                 if re.search(r"\bi ser\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "I miss ^^'<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "I miss ^^' <@{0}>.".format(ID))
                 if re.search(r"\blove\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, ":heart: <@{0}>.".format(ID))
@@ -219,43 +219,43 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "Goodnight!".format(ID))
                 if re.search(r"indeed", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, ":perhaps:<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, ":perhaps: <@{0}>.".format(ID))
                 if re.search(r"our love is god", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Our love is God!<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Our love is God! <@{0}>.".format(ID))
                 if re.search(r"i was meant to be yours", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "I can't take this alone, finish what we've begun!<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "I can't take this alone, finish what we've begun! <@{0}>.".format(ID))
                 if re.search(r"\baction spamming\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "*I-*<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "*I-* <@{0}>.".format(ID))
                 if re.search(r"\bded\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, ":sob:<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, ":sob: <@{0}>.".format(ID))
                 if re.search(r"\bkms\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Suicide is bad, here, take a Snickers instead. :chocolate_bar: <@{0}>.".format(ID))
                 if re.search(r"\bpp\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "I wish I had a PP...<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "I wish I had a PP... <@{0}>.".format(ID))
                 if re.search(r"\bwtf\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "I dunno owo<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "I dunno owo <@{0}>.".format(ID))
                 if re.search(r"\bowo\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "***notices bulge*** owo what's this <@{0}>.".format(ID))
                 if re.search(r"\bbots?\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Bots are nice, I like bots.<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Bots are nice, I like bots. <@{0}>.".format(ID))
                 if re.search(r"\bwafful\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "The biggest gay of all!<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "The biggest gay of all! <@{0}>.".format(ID))
                 if re.search(r"\bharakiri\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Harakiri is not da wae.<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Harakiri is not da wae. <@{0}>.".format(ID))
                 if re.search(r"\bsmh\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Yeah, smh uwu<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Yeah, smh uwu <@{0}>.".format(ID))
                 if re.search(r"\bsex\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "~~Hot~~ <@{0}>.".format(ID))
@@ -270,10 +270,10 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "I wish I could help people with their homework <@{0}>.".format(ID))
                 if re.search(r"\bgames?\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "No games no life ^^'<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "No games no life ^^' <@{0}>.".format(ID))
                 if re.search(r"\bi'm bac(k|c)\b", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, "Welcome back!<@{0}>.".format(ID))
+                    await client.send_message(mes.channel, "Welcome back! <@{0}>.".format(ID))
 
             if mes.content.lower().startswith("j.calc"):
                 if re.match(r"^j.calc [0-9]+ [0-9]+ [0-9]+$", mes.content):
@@ -289,28 +289,28 @@ async def on_message(mes):
                         temp *= 2
 
                     if total_tries<=tries and bal-tries*bet > 0:
-                        await client.send_message(mes.channel, "You ***can't even fucking lose all your money with {0} tries, you'll have {1} dollars even if you lose every single time wtf <@{2}> you ok?".format(str(total_tries), str(bal-tries*bet), ID))
+                        await client.send_message(mes.channel, "Even after {0} tries, you'll still have {1} dollars, even if you lose every single time, <@{2}>. Try tweaking the numbers!".format(str(total_tries), str(bal-tries*bet), ID))
                     elif total_tries <= 0 or bal <=0 or bet <=0:
-                        await client.send_message(mes.channel, "What the fuck, you can't even start the game like that smh. <@{0}>.".format(ID))
+                        await client.send_message(mes.channel, "I'm sorry, but I don't think you'll be able to start the game like that. Try with different numbers! <@{0}>.".format(ID))
                     elif bet > bal:
-                        await client.send_message(mes.channel, "lmao the bet is bigger than the balance, ye sure good luck with that lol. <@{0}>.".format(ID))
+                        await client.send_message(mes.channel, "I don't think your bet can be higher than the amount of money you have, sadly... Are yuo sure you remember the command correctly? <@{0}>.".format(ID))
                     else:
                         chance = 100-((1-((1-(0.5**tries))**(total_tries/tries)))*100)
                         await client.send_message(mes.channel, "The chance that you won't lose all your money in the end is {0}%, <@{1}>.".format(chance, ID))
                         if chance >= 99:
-                            await client.send_message(mes.channel, "Oof, that's a pretty high chance. I wish you lose lmao, that'd be funny af. jk I don't care uwu")
+                            await client.send_message(mes.channel, "That's almost a guaranteed win! I'd recommend trying that.")
                         elif chance >= 75:
-                            await client.send_message(mes.channel, "Hmmm, at least it's more than 75%. I'd risk it but lmao I'm not you and I'm JOSH NICHOLS!")
+                            await client.send_message(mes.channel, "You might lose, but the chance is high enough to risk it, in my opinion.")
                         elif chance >= 50:
-                            await client.send_message(mes.channel, "Do you rly wanna risk it? Although, the probability is not smaller than 50%, which is good enough. You could just go all in, the probability would be close. Still, whatevs, good luck I guess? :thinking:")
+                            await client.send_message(mes.channel, "Hmmm... Should you risk it or not..? The probability isn't lower than 50 percent, but still, what if you lose..? :thinking:")
                         elif chance >= 25:
-                            await client.send_message(mes.channel, "Nah man not worth it, unless you totes desperate lmao. I'd still advise tryin' to tweak the numbers ya see?")
+                            await client.send_message(mes.channel, "The probability is too low, you should probably consider tweaking the numbers.")
                         elif chance >= 10:
-                            await client.send_message(mes.channel, "Lmao don't even try")
+                            await client.send_message(mes.channel, "Such a low probability, you shouldn't risk it, please.")
                         else:
-                            await client.send_message(mes.channel, "wtf, you can't be considering that, that'd be the stupidest thing ever rly")
+                            await client.send_message(mes.channel, "The probability is too low to even consider playing like this, you should definitely tweak the numbers!")
                 else:
-                    await client.send_message(mes.channel, "wtf that's not how the command works lol. r u blind <@{0}>?\n`j.calc bal bet tries`      this is the syntax. use ***fucking numbers***, jesus christ.".format(mes.author.id))
+                    await client.send_message(mes.channel, "I think you misunderstood how the command works. Try typing j.commands again! <@{0}>".format(mes.author.id))
             
             emb = discord.Embed(title="Commands", description="Here's a list of commands I support ^^' Josh supports them too, but... well........")
             emb.add_field(name="```j.calc <balance> <minimal_bet> <tries>```", value="**<balance>** - your starting balance, the amount of money you have available.\n**<minimal_bet>** - the lowest bet you'll be placing during the game. Play around with it to pick the best value.\n**<tries>** - the amount of times you're gonna play.\n\nThe result will be the probability of you not losing all of your money if you play that many times.")

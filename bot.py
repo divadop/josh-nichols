@@ -150,10 +150,10 @@ async def on_message(mes):
                                 return True
                             else:
                                 return False
-                        msg2 = Client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
-                        if msg2:
+                        msg2 = client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
+                        if msg2.content:
                             client.send_message(discord.Server.get_member(mes.server, user_id = "383307469402931210"), msg2)
-                            msg2 = None
+                            msg2.content = None
                 if re.search(r"w ?o ?o ?d", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "Yes, all hail Wood!<@{0}>.".format(ID))

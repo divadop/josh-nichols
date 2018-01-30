@@ -127,20 +127,7 @@ async def on_message(mes):
                 '''if re.search(r" ", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
-                if re.search(r"<@214809167368683521>", mes.content.lower()):
-                    ID = mes.author.id
-                    if discord.Server.get_member(mes.server, user_id = "214809167368683521").status != "online" and discord.Server.get_member(mes.server, user_id = "214809167368683521").status != "idle":
-                        await client.send_message(mes.channel, "Hm, PurpleHaze doesn't seem to be free right now. <@{0}>, I'll DM him your message, if you want. Say yes if you do.".format(ID))
-                        def check(msg):
-                            if re.match(r"^'?\"?yes\"?'?\b", msg.content.lower()):
-                                return True
-                            else:
-                                return False
-                        msg2 = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
-                        if msg2:
-                            await send_message(discord.Server.get_member(mes.server, user_id = "214809167368683521"), msg2)
-                            msg2 = None
-                if re.search(r"david", mes.content.lower()):
+                if re.search(r"\bdavid'b", mes.content.lower()):
                     ID = mes.author.id
                     print(discord.Server.get_member(mes.server, user_id = "383307469402931210").status)
                     if discord.Server.get_member(mes.server, user_id = "383307469402931210").status != "online" and discord.Server.get_member(mes.server, user_id = "383307469402931210").status != "idle":
@@ -152,7 +139,7 @@ async def on_message(mes):
                                 return False
                         msg2 = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel, check=check)
                         if msg2.content:
-                            await client.send_message(discord.Server.get_member(mes.server, user_id = "383307469402931210"), msg2)
+                            await client.send_message(discord.Server.get_member(mes.server, user_id = "383307469402931210"), "**{0} says:** {msg2.content)
                             msg2.content = None
                 if re.search(r"w ?o ?o ?d", mes.content.lower()):
                     ID = mes.author.id
@@ -324,9 +311,9 @@ async def on_message(mes):
                 await client.send_message(mes.channel, "Here.", embed = emb)
             if mes.content == "j.tactic":
                 await client.send_message(mes.channel, "```First, choose a minimal bet, that's the lowest bet you'll be placing during the whole game. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and start betting again from the minimal bet.\nYou shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of succeeding.\nType j.commands to see how the command works, please.```")
-
                 
                 
+                                                      
         else:
             if re.search(r"\bom\b", mes.content.lower()):
                     ID = mes.author.id

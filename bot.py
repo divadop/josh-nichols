@@ -313,7 +313,7 @@ async def on_message(mes):
             if mes.content == "j.tactic":
                 await client.send_message(mes.channel, "```First, choose a minimal bet, that's the lowest bet you'll be placing during the whole game. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and start betting again from the minimal bet.\nYou shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of succeeding.\nType j.commands to see how the command works, please.```")
                 
-            if mes.content.lower ().startswith("j.rng")
+            if mes.content.lower ().startswith("j.rng"):
                 if re.match(r"^j.rng [0-9]+ [0-9]+ [0-9]+$", mes.content):
                     ID = mes.author.id
                     res = mes.content.split(" ")

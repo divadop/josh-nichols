@@ -333,7 +333,7 @@ async def on_message(mes):
                             max, min = min, max
                         ret = []
                         for x in range(1, nus):
-                            ret.append(random.randrange(min, max))
+                            ret.append(str(random.randrange(min, max)))
                         ret = " ".join(ret)
                         await client.send_message(mes.channel, "**<@{0}>**: ".format(ID) + ret)
                 else:

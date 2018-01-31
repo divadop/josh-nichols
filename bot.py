@@ -314,9 +314,9 @@ async def on_message(mes):
                 await client.send_message(mes.channel, "```First, choose a minimal bet, that's the lowest bet you'll be placing during the whole game. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and start betting again from the minimal bet.\nYou shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of succeeding.\nType j.commands to see how the command works, please.```")
                 
             if mes.content.lower ().startswith("j.rng"):
-                if re.match(r"^j.rng [0-9]+ [0-9]+ [0-9]+$", mes.content):
+                if re.match(r"^j.rng [0-9]+ [0-9]+ [0-9]+$", mes.content.lower()):
                     ID = mes.author.id
-                    res = mes.content.split(" ")
+                    res = mes.content.lower().split(" ")
                     min = int(res[1])
                     max = int(res[2])
                     nus = int(res[3])
@@ -333,10 +333,27 @@ async def on_message(mes):
                             max, min = min, max
                         ret = []
                         for x in range(1, nus):
-                            ret.append = random.randrange(min, max)
+                            ret.append(random.randrange(min, max))
                         ret = " ".join(ret)
-                        await client.send_message(mes.channel, ret)
+                        await client.send_message(mes.channel, "**<@{0}>**: ".format(ID) + ret)
+                else:
+                    await client.send_message(mes.channel, "Sorry, that's not really how the command works... Try checking it again!")
                                     
+            if mes.content.lower().startswith("j.chance"):
+                if re.match(r"^j.chance [0-9][0-9]?%? $", mes.content.lower()):
+                    ID = mes.author.id
+                    res = mes.content.lower().split(" ")
+                    chance = re.sub(r"[ %]", "", res[1])
+                    if chance < 0 or chance > 100:
+                        await client.send_message(mes.channel, "Sorry, the chance needs to be from the range 0-100.")
+                    else:
+                        x = random.randrange(0, 100)
+                        if x < chance:
+                            await client.send_message(mes.channel, "**<@{0}>**: **Success!**".format(ID))
+                        else:
+                            await client.send_message(mes.channel, "**<@{0}**: **Failure.** Sorry.".format(ID))
+                else:
+                    await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
         else:
             if re.search(r"\bom\b", mes.content.lower()):
                     ID = mes.author.id
@@ -344,9 +361,9 @@ async def on_message(mes):
                     pic = random.choice(["http://s2.quickmeme.com/img/8d/8da8c3d8e11da61d7886025a62be2d18f82e1c673007a357471c8a21ae70b8e0.jpg", "https://img.memecdn.com/om-nom-nom_o_2085747.jpg", "https://media.giphy.com/media/YmYemei6DDkrK/giphy.gif", "http://roflzoo.com/pics/052010/bird-om-nom-nom-big.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUJ14VGR5i5dWaiCLoH1YZx6kP4H7hfHWYgJzp1deYQj_BqGq"])
                     await client.send_message(mes.channel, pic)
             if client.trigger.get(mes.server.id, True):
-                '''if re.search(r" ", mes.content.lower()):
+                ```if re.search(r" ", mes.content.lower()):
                     ID = mes.author.id
-                    await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
+                    await client.send_message(mes.channel, " <@{0}>.".format(ID))```
                 if re.search(r"porps", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))

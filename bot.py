@@ -355,15 +355,16 @@ async def on_message(mes):
                 else:
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
         else:
+            '''if re.search(r" ", mes.content.lower()):
+                    ID = mes.author.id
+                    await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
+     
             if re.search(r"\bom\b", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "is this you <@{0}>".format(ID))
                     pic = random.choice(["http://s2.quickmeme.com/img/8d/8da8c3d8e11da61d7886025a62be2d18f82e1c673007a357471c8a21ae70b8e0.jpg", "https://img.memecdn.com/om-nom-nom_o_2085747.jpg", "https://media.giphy.com/media/YmYemei6DDkrK/giphy.gif", "http://roflzoo.com/pics/052010/bird-om-nom-nom-big.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUJ14VGR5i5dWaiCLoH1YZx6kP4H7hfHWYgJzp1deYQj_BqGq"])
                     await client.send_message(mes.channel, pic)
             if client.trigger.get(mes.server.id, True):
-                 '''if re.search(r" ", mes.content.lower()):
-                    ID = mes.author.id
-                    await client.send_message(mes.channel, " <@{0}>.".format(ID))'''
                 if re.search(r"porps", mes.content.lower()):
                     ID = mes.author.id
                     await client.send_message(mes.channel, "what do you want from porps, <@{0}> ? he's a busy man ya know".format(ID))

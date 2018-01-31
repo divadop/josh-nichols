@@ -328,7 +328,7 @@ async def on_message(mes):
                         await client.send_message(mes.channel, "Woah, chill, use smaller numbers please, my head hurts uwu.")
                                      
                     else:
-                        if max > min > 0=:
+                        if max > min > 0:
                             await client.send_message(mes.channel, "Umm... The minimal number needs to be smaller than the max number... Well, I gotchu, don't worry :sweat_smile: ***changes the two numbers' places***")
                             max, min = min, max
                         ret = []

@@ -305,15 +305,38 @@ async def on_message(mes):
             emb.add_field(name="```j.doit```", value="Gives me permission to speak. Not everyone can use this command.")
             emb.add_field(name="```j.stahp```", value="Takes away my permission to speak. Not everyone can use this command.")
             emb.add_field(name="```j.tactic```", value="Describes the tactic that I recommend playing with to win in the coinflip game.")
+            emb.add_field(name="```j.rng <min> <max> <nums>```", value="**<nums>** - amount of numbers to return. Min, max set the range of the numbers.")
+            emb.add_field(name="```j.chance <chance>```", value="**<chance>** - chance of success (in percents).")
             emb.add_field(name="```jd.persona```", value="........reverts me back to the 'Josh' personality. Please don't use this, I'm begging you.")
-            
             if mes.content == "j.commands":
                 await client.send_message(mes.channel, "Here.", embed = emb)
             if mes.content == "j.tactic":
                 await client.send_message(mes.channel, "```First, choose a minimal bet, that's the lowest bet you'll be placing during the whole game. It should be small enough, compared to the balance.\nAfter that, flip the coin, placing the minimal bet. If you lose - double the bet. Keep doing that till you win, and start betting again from the minimal bet.\nYou shouldn't double the bet if you win, ever.\nUse the j.calc command to calculate the chance of succeeding.\nType j.commands to see how the command works, please.```")
                 
-                
-                                                      
+            if mes.content.lower ().startswith("j.rng")
+                if re.match(r"^j.rng [0-9]+ [0-9]+ [0-9]+$", mes.content):
+                    ID = mes.author.id
+                    res = mes.content.split(" ")
+                    min = int(res[1])
+                    max = int(res[2])
+                    nus = int(res[3])
+                    if max < 0 or min < 0 or max == min:
+                        await client.send_message(mes.channel, "...uhh... Something isn't right, please try again. The min and max numbers must be greater or equal to zero, and the max and min numbers can't be equal.")
+                    elif nus < 0 or nus > 100:
+                        await client.send_message(mes.channel, "Sorry, the amount of numbers that I return can't be greater than 100 and needs to be greater than zero.")
+                    elif max > 1000000000 or min > 1000000000:
+                        await client.send_message(mes.channel, "Woah, chill, use smaller numbers please, my head hurts uwu.")
+                                     
+                    else:
+                        if max > min > 0=:
+                            await client.send_message(mes.channel, "Umm... The minimal number needs to be smaller than the max number... Well, I gotchu, don't worry :sweat_smile: ***changes the two numbers' places***")
+                            max, min = min, max
+                        ret = []
+                        for x in range(1, nus):
+                            ret.append = random.randrange(min, max)
+                        ret = " ".join(ret)
+                        await client.send_message(mes.channel, ret)
+                                    
         else:
             if re.search(r"\bom\b", mes.content.lower()):
                     ID = mes.author.id

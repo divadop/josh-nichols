@@ -351,7 +351,7 @@ async def on_message(mes):
                         if x < chance:
                             await client.send_message(mes.channel, "**<@{0}>**: **Success!**".format(ID))
                         else:
-                            await client.send_message(mes.channel, "**<@{0}**: **Failure.** Sorry.".format(ID))
+                            await client.send_message(mes.channel, "**<@{0}>**: **Failure.** Sorry.".format(ID))
                 else:
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
         else:

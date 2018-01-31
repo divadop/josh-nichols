@@ -332,7 +332,7 @@ async def on_message(mes):
                             await client.send_message(mes.channel, "Umm... The minimal number needs to be smaller than the max number... Well, I gotchu, don't worry :sweat_smile: ***changes the two numbers' places***")
                             max, min = min, max
                         ret = []
-                        for x in range(1, nus):
+                        for x in range(0, nus):
                             ret.append(str(random.randrange(min, max)))
                         ret = " ".join(ret)
                         await client.send_message(mes.channel, "**<@{0}>**: ".format(ID) + ret)
@@ -340,7 +340,7 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "Sorry, that's not really how the command works... Try checking it again!")
                                     
             if mes.content.lower().startswith("j.chance"):
-                if re.match(r"^j.chance [0-9][0-9]?%? $", mes.content.lower()):
+                if re.match(r"^j.chance [0-9][0-9]?%? ?$", mes.content.lower()):
                     ID = mes.author.id
                     res = mes.content.lower().split(" ")
                     chance = re.sub(r"[ %]", "", res[1])

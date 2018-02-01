@@ -354,6 +354,19 @@ async def on_message(mes):
                             await client.send_message(mes.channel, "**<@{0}>**: **Failure.** Sorry.".format(ID))
                 else:
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
+            
+            if mes.content.lower ().startswith("j.say"):
+                sname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
+                for a in Client.servers:
+                        if a.name == sname:
+                            sID = a.id
+                chname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
+                for b in Client.get_server(sID).channels:
+                    if b.name == chnamme:
+                        cID = b.id
+                messs = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
+                await client.send_message(Client.get_channel(cID), messs)
+                                    
         else:
             '''if re.search(r" ", mes.content.lower()):
                     ID = mes.author.id

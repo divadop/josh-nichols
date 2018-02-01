@@ -365,6 +365,7 @@ async def on_message(mes):
                         break
                 else:
                     await client.send_message(mes.channel, "Nope, no dice.")
+                    print(Client.get_server("406848018059493395").name)
                 chname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 for b in Client.get_server(sID).channels:
                     if b.name == chnamme:

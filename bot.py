@@ -356,14 +356,23 @@ async def on_message(mes):
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
             
             if mes.content.lower ().startswith("j.say"):
+                await client.send_message(mes.channel, "Enter the server name (no quotation marks).")
                 sname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 for a in Client.servers:
-                        if a.name == sname:
-                            sID = a.id
+                    if a.name == sname:
+                        sID = a.id
+                        await client.send_message(mes.channel, "Success! Now, enter the channel name.")
+                        break
+                finally:
+                    await client.send_message(mes.channel, "Nope, no dice.")
                 chname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 for b in Client.get_server(sID).channels:
                     if b.name == chnamme:
                         cID = b.id
+                        await client.send_message(mes.channel, "Success! Now, enter the message.")
+                        break
+                finally:
+                    await client.send_message(mes.channel, "Nope, no dice.")
                 messs = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 await client.send_message(Client.get_channel(cID), messs)
                                     

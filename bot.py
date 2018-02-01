@@ -363,7 +363,7 @@ async def on_message(mes):
                         sID = a.id
                         await client.send_message(mes.channel, "Success! Now, enter the channel name.")
                         break
-                finally:
+                else:
                     await client.send_message(mes.channel, "Nope, no dice.")
                 chname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 for b in Client.get_server(sID).channels:
@@ -371,7 +371,7 @@ async def on_message(mes):
                         cID = b.id
                         await client.send_message(mes.channel, "Success! Now, enter the message.")
                         break
-                finally:
+                else:
                     await client.send_message(mes.channel, "Nope, no dice.")
                 messs = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 await client.send_message(Client.get_channel(cID), messs)

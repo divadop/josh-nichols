@@ -358,7 +358,7 @@ async def on_message(mes):
                 ID = mes.author.id
                 ans = " ".join(mes.content.lower().split(" ")[1::])
                 await client.send_message(mes.channel, ans)
-                client.delete_message(mes)
+                await client.delete_message(mes)
             if mes.content.lower().startswith("j.say"):
                 await client.send_message(mes.channel, "Enter the server name (no quotation marks).")
                 sname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)

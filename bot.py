@@ -354,7 +354,7 @@ async def on_message(mes):
                             await client.send_message(mes.channel, "**<@{0}>**: **Failure.** Sorry.".format(ID))
                 else:
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
-            if mes.content.lower().startsiwth("j.nar"):
+            if mes.content.lower().startswith("j.nar"):
                 ID = mes.author.id
                 ans = " ".join(mes.content.lower().split(" ")[1::])
                 await client.send_message(mes.channel, ans)

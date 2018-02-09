@@ -354,8 +354,12 @@ async def on_message(mes):
                             await client.send_message(mes.channel, "**<@{0}>**: **Failure.** Sorry.".format(ID))
                 else:
                     await client.send_message(mes.channel, "That's not how the command works, sorry. Check the syntax again!")
-            
-            if mes.content.lower ().startswith("j.say"):
+            if mes.content.lower().startsiwth("j.nar"):
+                ID = mes.author.id
+                ans = " ".join(mes.content.lower().split(" ")[1::])
+                await client.send_message(mes.channel, ans)
+                client.delete_message(mes)
+            if mes.content.lower().startswith("j.say"):
                 await client.send_message(mes.channel, "Enter the server name (no quotation marks).")
                 sname = await client.wait_for_message(timeout=None, author=mes.author, channel=mes.channel)
                 for a in Client.servers:

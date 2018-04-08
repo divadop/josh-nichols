@@ -103,16 +103,32 @@ async def on_message(mes):
                 await client.send_message(mes.channel, "lol y doe\nmeh whatevs you're the boss\n***ASFiahsfoaishgaoisfhSOAIHF***")
                 client.persona[mes.server.id] = True
             else:
-                await client.send_message(mes.channel, "Sorry, but I'll have to refuse. That persona is too unpredictable, I can't let it out for just anyone. Sorry again.")
+                await client.send_message(mes.channel, "wtf no go gtfo, i'm not listening to u, ur balls are too green.")
     
     
     
     if mes.author.id == "406847337277947934":
         pass
-    elif mes.author.id == "11037":
-        pass
-    
-    
+    elif mes.author.id == "409700085329428490":
+        ID = mes.author.id
+        if re.search(r"\bban him.\b", mes.content.lower()):
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "Um... I'm sorry, but I'm told that I have to mute you if something like this happens. I'm sorry, <@{0}>.".format(ID))
+            if client.persona.get(mes.server.id, False):
+                await client.send_message(mes.channel, "Okay u ghey don't tell us we didn't warn you, finna mute ur ass! <@{0}> >:O".format(ID))
+            try:
+            client.server_voice_state(mes.author, mute=True)
+        except:
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "Oh... I don't have permission. But please stop this.")
+            else:
+                await client.send_message(mes.channel, "wtf, i'm not able to do that??? n a n i?????")
+        elif re.search(r"\bban\b", mes.content.lower()):
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "...have a nice day :). <@{0}>".format(ID))
+            if client.persona.get(mes.server.id, False):
+                await client.send_message(mes.channel, "Oh ur one to talk about bans, FINNA MUTE HAHA YES")
+                await client.send_message(mes.channel, "nvm dave tells i can't do that and I physically can't defy him yeet")
     
     
     

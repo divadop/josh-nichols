@@ -118,11 +118,11 @@ async def on_message(mes):
                 await client.send_message(mes.channel, "Okay u ghey don't tell us we didn't warn you, finna mute ur ass! <@{0}> >:O".format(ID))
             try:
                 client.server_voice_state(mes.author, mute=True)
-        except:
-            if client.persona.get(mes.server.id, True):
-                await client.send_message(mes.channel, "Oh... I don't have permission. But please stop this.")
-            else:
-                await client.send_message(mes.channel, "wtf, i'm not able to do that??? n a n i?????")
+            except:
+                if client.persona.get(mes.server.id, True):
+                    await client.send_message(mes.channel, "Oh... I don't have permission. But please stop this.")
+                else:
+                    await client.send_message(mes.channel, "wtf, i'm not able to do that??? n a n i?????")
         elif re.search(r"\bban\b", mes.content.lower()):
             if client.persona.get(mes.server.id, True):
                 await client.send_message(mes.channel, "...have a nice day :). <@{0}>".format(ID))

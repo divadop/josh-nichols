@@ -10,14 +10,14 @@ client = commands.Bot(command_prefix = "j.")
 
 @client.command()
 async def ping():
-    await bot.say("Pong!")
+    await client.say("Pong!")
 
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
     client.trigger = {}
     client.persona = {}
-    bot.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
+    client.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":

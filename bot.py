@@ -17,6 +17,7 @@ async def on_ready():
     print("I'm ready, beatch!")
     client.trigger = {}
     client.persona = {}
+    bot.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":

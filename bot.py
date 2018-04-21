@@ -11,16 +11,16 @@ client = commands.Bot(command_prefix = "j.")
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
-    client.trigger = {discord.Server.id: False}
+    client.trigger = {discord.server.id: False}
     client.persona = {}
     await client.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
     
 @client.event
 async def on_message_delete(mes):
-    await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\n```{1}```".format(mes.author.id, mes.content))
+    await client.send_message(client.get_channel('437294028925435924'), "<@{0}> said:\n```{1}```".format(mes.author.id, mes.content))
 @client.event
 async def on_message_edit(mes1, mes2):
-    await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\n```{1}\n---------{2}```".format(mes1.author.id, mes1.content, mes2.content))
+    await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\nOriginal message:\n```{1}\n---------\nEdited message:\n{2}```".format(mes1.author.id, mes1.content, mes2.content))
     
 
 @client.event

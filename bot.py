@@ -11,7 +11,7 @@ client = commands.Bot(command_prefix = "j.")
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
-    client.trigger = {discord.Server.id: False}
+    client.trigger = {'417464282872152064': False}
     client.persona = {}
     await client.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
     

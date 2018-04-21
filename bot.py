@@ -17,10 +17,10 @@ async def on_ready():
     
 @client.event
 async def on_message_delete(mes):
-    await client.send_message(Client.get_channel(437294028925435924), "<@{0}>\n```{1}```".format(mes.author.id, mes.content))
+    await client.send_message(Client.get_channel('437294028925435924'), "<@{0}>\n```{1}```".format(mes.author.id, mes.content))
 @client.event
 async def on_message_edit(mes1, mes2):
-    await client.send_message(Client.get_channel(437294028925435924), "<@{0}>\n```{1}\n---------{2}```".format(mes1.author.id, mes1.content, mes2.content))
+    await client.send_message(Client.get_channel('437294028925435924'), "<@{0}>\n```{1}\n---------{2}```".format(mes1.author.id, mes1.content, mes2.content))
     
 
 @client.event

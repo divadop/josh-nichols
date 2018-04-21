@@ -8,16 +8,21 @@ import os
 Client = discord.Client()
 client = commands.Bot(command_prefix = "j.")
 
-@client.command()
-async def ping():
-    await client.say("Pong!")
-
 @client.event
 async def on_ready():
     print("I'm ready, beatch!")
-    client.trigger = {}
+    client.trigger = {discord.Server.id: False}
     client.persona = {}
     await client.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
+    
+@client.event
+async def on_message_delete(mes):
+    await client.send_message(Client.get_channel(437294028925435924), "<@{0}>\n```{1}```".format(mes.author.id, mes.content))
+@client.event
+async def on_message_edit(mes1, mes2):
+    await client.send_message(Client.get_channel(437294028925435924), "<@{0}>\n```{1}\n---------{2}```".format(mes1.author.id, mes1.content, mes2.content))
+    
+
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":

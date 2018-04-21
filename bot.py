@@ -15,7 +15,7 @@ async def on_ready():
     client.persona = {}
     await client.change_presence(game=discord.Game(name='Type j.commands for the list of commands.'))
     
-@client.event 406847337277947934
+@client.event
 async def on_message_delete(mes):
     if mes.author.id != "406847337277947934":
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}> said:\n```{1}```".format(mes.author.id, mes.content))

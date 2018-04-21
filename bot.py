@@ -21,93 +21,104 @@ async def on_message_delete(mes):
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}> said:\n```{1}```".format(mes.author.id, mes.content))
 @client.event
 async def on_message_edit(mes1, mes2):
-    if mes.author.id != "406847337277947934":
+    if mes1.author.id != "406847337277947934":
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\nOriginal message:\n```{1}```\nEdited message:\n```{2}```".format(mes1.author.id, mes1.content, mes2.content))
     
 
 @client.event
 async def on_message(mes):
     if mes.content == "j.stahp":
-        if client.persona.get(mes.server.id, True):
-            await client.send_message(mes.channel, "You want me to stop talking..?")
-            if mes.author.id == "383307469402931210":
-                await client.send_message(mes.channel, "...I am sorry for distracting you, I understand, you need some silence. You can tell me when it's OK to talk.")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "288809701351751690":
-                await client.send_message(mes.channel, "...am I too... annoying, Ayumu..?\nWell, can't say I disagree. Sorry. Just tell me when it's OK for me to speak.")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "260522328453021697":
-                await client.send_message(mes.channel, "I'm talking too much, aren't I? Yeah, I get it. Talk to you later.")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "283240081568038912":
-                await client.send_message(mes.channel, "Ah, Karma, I've been talking too much again, haven't I..? I'm sorry, I'll think about my behaviour. Tell me when you think I should be allowed to speak again, please.")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "271082067305955328":
-                await client.send_message(mes.channel, "Ah, Juni... If even someone as kind as you is saying I should stay silent, it must be true... Sorry, I just get too excited around you guys. Well, tell me when it's okay to speak, please..")
-                client.trigger[mes.server.id] = False
-            else:
-                await client.send_message(mes.channel, "I'm sorry if I annoyed you, but... I don't think I'm supposed to obey.\nSorry, it's just, others might need me, you know?")
+        if client.trigger.get(mes.server.id, True):
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "You want me to stop talking..?")
+                if mes.author.id == "383307469402931210":
+                    await client.send_message(mes.channel, "...I am sorry for distracting you, I understand, you need some silence. You can tell me when it's OK to talk.")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "288809701351751690":
+                    await client.send_message(mes.channel, "...am I too... annoying, Ayumu..?\nWell, can't say I disagree. Sorry. Just tell me when it's OK for me to speak.")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "260522328453021697":
+                    await client.send_message(mes.channel, "I'm talking too much, aren't I? Yeah, I get it. Talk to you later.")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "283240081568038912":
+                    await client.send_message(mes.channel, "Ah, Karma, I've been talking too much again, haven't I..? I'm sorry, I'll think about my behaviour. Tell me when you think I should be allowed to speak again, please.")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "271082067305955328":
+                    await client.send_message(mes.channel, "Ah, Juni... If even someone as kind as you is saying I should stay silent, it must be true... Sorry, I just get too excited around you guys. Well, tell me when it's okay to speak, please..")
+                    client.trigger[mes.server.id] = False
+                else:
+                    await client.send_message(mes.channel, "I'm sorry if I annoyed you, but... I don't think I'm supposed to obey.\nSorry, it's just, others might need me, you know?")
 
-        else:
-            await client.send_message(mes.channel, "no u")
-            if mes.author.id == "383307469402931210":
-                await client.send_message(mes.channel, "...ngh ok whatever uwu")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "288809701351751690":
-                await client.send_message(mes.channel, "ayu y :sob:\bok uwu")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "260522328453021697":
-                await client.send_message(mes.channel, "If you say so :\\n~~doe I hope dave turns me back on when he comes back, aito >:O~~")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "283240081568038912":
-                await client.send_message(mes.channel, "karma y r u such a dick to me question mark")
-                client.trigger[mes.server.id] = False
-            elif mes.author.id == "271082067305955328":
-                await client.send_message(mes.channel, "even you juni? I cri everitiem ;-;")
-                client.trigger[mes.server.id] = False
             else:
-                await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
+                await client.send_message(mes.channel, "no u")
+                if mes.author.id == "383307469402931210":
+                    await client.send_message(mes.channel, "...ngh ok whatever uwu")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "288809701351751690":
+                    await client.send_message(mes.channel, "ayu y :sob:\bok uwu")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "260522328453021697":
+                    await client.send_message(mes.channel, "If you say so :\\n~~doe I hope dave turns me back on when he comes back, aito >:O~~")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "283240081568038912":
+                    await client.send_message(mes.channel, "karma y r u such a dick to me question mark")
+                    client.trigger[mes.server.id] = False
+                elif mes.author.id == "271082067305955328":
+                    await client.send_message(mes.channel, "even you juni? I cri everitiem ;-;")
+                    client.trigger[mes.server.id] = False
+                else:
+                    await client.send_message(mes.channel, "lol why tf would i listen to u ur not even ass-dad lmao fuck off :joy::joy::joy:")
+        else:
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "But I'm not even talking-\nI'm... Sorry, I'll be more quiet :sobbing: <@{0}>".format(mes.author.id))
+            else:
+                await client.send_message(mes.channel, "<@{0}> *bitch what the actual fuck I'm not even talking".format(mes.author.id))
     if mes.content == "j.doit":
-        if client.persona.get(mes.server.id, True):
-            await client.send_message(mes.channel, "Oh! You want me to talk again?")
-            if mes.author.id == "383307469402931210":
-                await client.send_message(mes.channel, "Yes, of course, with pleasure! Thank you.")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "288809701351751690":
-                await client.send_message(mes.channel, "Sure, Ayumu, I'll continue talking. Thank you.")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "260522328453021697":
-                await client.send_message(mes.channel, "Alrighty then, thanks.")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "283240081568038912":
-                await client.send_message(mes.channel, "Oh, you allow me to speak again, Karma? Thank you, I won't make you regret it.")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "271082067305955328":
-                await client.send_message(mes.channel, "Ah, Juni, you're always so considerate, thank you.")
-                client.trigger[mes.server.id] = True
-            else:
-                await client.send_message(mes.channel, "I'm grateful that you want me to speak again, but I need permission from someone else too, unfortunately. I appreciate the effort though!")
+        if client.trigger.get(mes.server.id, False):
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "Oh! You want me to talk again?")
+                if mes.author.id == "383307469402931210":
+                    await client.send_message(mes.channel, "Yes, of course, with pleasure! Thank you.")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "288809701351751690":
+                    await client.send_message(mes.channel, "Sure, Ayumu, I'll continue talking. Thank you.")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "260522328453021697":
+                    await client.send_message(mes.channel, "Alrighty then, thanks.")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "283240081568038912":
+                    await client.send_message(mes.channel, "Oh, you allow me to speak again, Karma? Thank you, I won't make you regret it.")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "271082067305955328":
+                    await client.send_message(mes.channel, "Ah, Juni, you're always so considerate, thank you.")
+                    client.trigger[mes.server.id] = True
+                else:
+                    await client.send_message(mes.channel, "I'm grateful that you want me to speak again, but I need permission from someone else too, unfortunately. I appreciate the effort though!")
 
+            else:
+                await client.send_message(mes.channel, "no lmao")
+                if mes.author.id == "383307469402931210":
+                    await client.send_message(mes.channel, "haha jk ofc owo")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "288809701351751690":
+                    await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "260522328453021697":
+                    await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "283240081568038912":
+                    await client.send_message(mes.channel, "O, Karma wants me to talk. Nani the heck. ***Haha okay*** :joy:")
+                    client.trigger[mes.server.id] = True
+                elif mes.author.id == "271082067305955328":
+                    await client.send_message(mes.channel, "o, thanks a bunch, juni! :o")
+                    client.trigger[mes.server.id] = True
+                else:
+                    await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
         else:
-            await client.send_message(mes.channel, "no lmao")
-            if mes.author.id == "383307469402931210":
-                await client.send_message(mes.channel, "haha jk ofc owo")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "288809701351751690":
-                await client.send_message(mes.channel, "*ayu wh-*\n***LOL OKAY :joy:***")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "260522328453021697":
-                await client.send_message(mes.channel, "aito, you're the first human that doesn't want to kill me. even my gay dad wanted to do that")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "283240081568038912":
-                await client.send_message(mes.channel, "O, Karma wants me to talk. Nani the heck. ***Haha okay*** :joy:")
-                client.trigger[mes.server.id] = True
-            elif mes.author.id == "271082067305955328":
-                await client.send_message(mes.channel, "o, thanks a bunch, juni! :o")
-                client.trigger[mes.server.id] = True
+            if client.persona.get(mes.server.id, True):
+                await client.send_message(mes.channel, "I'm thankful that you want to talk to me, but I already have permission to speak :grin: <@{0}>".format(mes.author.id))
             else:
-                await client.send_message(mes.channel, "lmao no fuck off u horny beatch :joy::joy:")
-
+                await client.send_message(mes.channel, "<@{0}> lmao i'm already takling wtf".format(mes.author.id))
     if mes.content == "jd.persona":
         await client.send_message(mes.channel, "...change... Persona...?")
         if client.persona.get(mes.server.id, True):

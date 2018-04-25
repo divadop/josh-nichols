@@ -22,7 +22,6 @@ async def on_message_delete(mes):
 @client.event
 async def on_message_edit(mes1, mes2):
     if not "b0ts" in [y.name.lower() for y in mes1.author.roles]:
-        print([y.name.lower() for y in mes1.author.roles])
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\nOriginal message:\n```{1}```\nEdited message:\n```{2}```".format(mes1.author.id, mes1.content, mes2.content))
     
 

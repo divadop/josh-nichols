@@ -17,11 +17,11 @@ async def on_ready():
     
 @client.event
 async def on_message_delete(mes):
-    if mes.author.id != "406847337277947934" and mes.author.id != "413728456942288896" and mes.author.id != "365975655608745985":
+    if not "b0ts" in [y.name.lower() for y in mes.author.roles]:
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}> said:\n```{1}```".format(mes.author.id, mes.content))
 @client.event
 async def on_message_edit(mes1, mes2):
-    if mes1.author.id != "406847337277947934" and mes1.author.id != "413728456942288896" and mes1.author.id != "365975655608745985":
+    if not "b0ts" in [y.name.lower() for y in mes1.author.roles]:
         await client.send_message(client.get_channel('437294028925435924'), "<@{0}>\nOriginal message:\n```{1}```\nEdited message:\n```{2}```".format(mes1.author.id, mes1.content, mes2.content))
     
 
